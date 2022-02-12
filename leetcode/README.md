@@ -4,4 +4,4 @@
 
 
 ## State Reduction（状态压缩）
-1. [1601. 最多可达成的换楼请求数目](https://github.com/coderhare/pc-solution/blob/main/leetcode/state_reduction/1601.md)
+1. [1601. 最多可达成的换楼请求数目](pc-solution/leetcode/state_reduction/1601.md)
