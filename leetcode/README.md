@@ -7,3 +7,4 @@
 1. [1601. 最多可达成的换楼请求数目](jetbrains://clion/navigate/reference?project=pc-solution&path=leetcode/state_reduction/1601.md)
 
 
+1. [1601. 最多可达成的换楼请求数目](jetbrains://clion/navigate/reference?project=pc-solution&path=leetcode/state_reduction/1601.md)
