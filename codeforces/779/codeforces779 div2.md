@@ -22,8 +22,6 @@ void solve(){ //要想满足每个＞=2的子串都满足0数目小于1，则最
 }
 ```
 
-
-
 ### B
 
 > 一眼猜答案，有一些number theory的意味在里面
@@ -82,6 +80,42 @@ void solve(){
         }
     }
     cout << "YES\n";
+}
+```
+
+### D1
+
+由异或的性质，如果说&x之前所有数的某一位为cnt[i]个，那么异或1之后必定不为cnt[i]个，因此，如果说某些位出现次数不为0并且异或后不为cnt[i]，则肯定出现过。
+
+```cpp
+void solve(){
+    vector <int> cnt(20);
+    int l, r;
+    cin >> l >> r;
+    for(int i = 0; i <= r; i++){
+        for(int j = 17; j >= 0; j--){
+            if((i >> j & 1)){
+                cnt[j]++;
+            }
+        }
+    }
+    int a;
+    vector <int> cnt1(20);
+    for(int i = 0; i <= r; i++){
+        cin >> a;
+        for(int j = 17; j >= 0; j--){
+            if((a >> j & 1) == 1) cnt1[j]++;
+        }
+    }
+    int ans = 0;
+    for(int i = 0; i <= 17; i++){
+        //cout << cnt1[i] << endl;
+        if(cnt1[i] == r + 1){
+            ans |= 1 << i;
+        }
+        else if(cnt1[i] && cnt[i] != cnt1[i]) ans |= 1 << i;
+    }
+    cout << ans << endl;
 }
 ```
 
